@@ -12,6 +12,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Utilitaire {
+    /**
+     * lire un fichier
+     * @param path
+     * @return une liste avec les lignes
+     */
     public static List<String> ReadFile(String path){
         Path filePath = null;
         try{
