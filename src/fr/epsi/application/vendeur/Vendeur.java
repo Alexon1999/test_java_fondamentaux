@@ -52,6 +52,12 @@ public class Vendeur {
         return String.format(str, nom, montantTotal , derniereVente.getDayOfMonth() + " " + derniereVente.getMonth().name() +  " " + derniereVente.getYear());
     }
 
+    /**
+     * @param line string contentenant les informations concernant un vendeur
+     * @param idx la ligne en cours de traitement
+     * @return Le vendeur
+     * @throws VendeurLigneFormatError si la ligne est mal formaté
+     */
     public static Vendeur formatLine(String line, Integer idx) throws VendeurLigneFormatError {
         try {
             String nom = line.substring(0, line.indexOf(":"));
