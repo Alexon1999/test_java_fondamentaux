@@ -12,9 +12,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Utilitaire {
+
     /**
      * lire un fichier
-     * @param path
+     * @param path path vers le fichier
      * @return une liste avec les lignes
      */
     public static List<String> ReadFile(String path){
@@ -30,9 +31,10 @@ public class Utilitaire {
         }
     }
 
-    /*
-    * @returns un nouveau liste trié par le montant du vendeur
-    * */
+    /**
+     * @param lesVendeurs la liste des vendeurs qu'on veut trier
+     * @return un nouveau liste trié par le montant du vendeur
+     */
     public static List<Vendeur> trierVendeurParMontant(List<Vendeur> lesVendeurs){
         // Trier les vendeurs par le montant total en ordre décroissant grâce à Un Comparator
         // https://www.baeldung.com/java-comparator-comparable
@@ -47,9 +49,10 @@ public class Utilitaire {
         return sortedList;
     }
 
-    /*
-     * @returns un nouveau liste trié par la date de dernière vente
-     * */
+    /**
+     * @param lesVendeurs la liste des vendeurs qu'on veut trier
+     * @return un nouveau liste trié par la date de dernière vente
+     */
     public static List<Vendeur> trierVendeurParDateDerniereVente(List<Vendeur> lesVendeurs){
         // Trier les vendeurs par date de dernière vente
         List<Vendeur> sortedList = lesVendeurs.stream()
